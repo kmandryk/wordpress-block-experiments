@@ -1,0 +1,9 @@
+{
+	"core": null,
+	"plugins": [
+		"./build/blocks-jsx/myBlock" 
+	],
+	"themes": [
+		"./bcgov-wordpress-block-theme"
+	]
+}

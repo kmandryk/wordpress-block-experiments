@@ -1,0 +1,113 @@
+/* stylelint-disable no-descending-specificity */
+
+/* Footer styles
+*
+*/
+
+// Template editor specific styles.
+html body.wp-admin .editor-styles-wrapper {
+
+	li {
+
+		border-left: 1px solid #4b5e73;
+
+		&:first-of-type {
+			border: none;
+		}
+
+		a {
+			font-size: 0.813rem;
+			margin-right: 1.5rem;
+			text-decoration: none;
+
+		}
+
+		&:not(:first-of-type) {
+			padding-left: 1.5rem;
+		}
+
+	}
+
+}
+
+// General footer styles.
+.wp-block-template-part {
+
+	&.site-footer {
+
+		.wp-block-columns {
+			margin-bottom: 0;
+
+			.is-footer-menu {
+
+				justify-content: center;
+
+				@media (min-width: $breakpoint-sm) {
+					justify-content: flex-start;
+				}
+
+				li {
+					border-left: none;
+
+					@media (min-width: $breakpoint-sm) {
+						border-left: 1px solid #4b5e73;
+					}
+
+					&:first-of-type {
+						border: none;
+					}
+
+					a {
+						font-size: 0.813rem;
+						margin-right: 1rem;
+
+						@media (min-width: $breakpoint-sm) {
+							margin-right: 1.5rem;
+						}
+						text-decoration: none;
+
+					}
+
+					&:not(:first-of-type) {
+
+						@media (min-width: $breakpoint-sm) {
+							padding-left: 1.5rem;
+						}
+					}
+				}
+
+			}
+
+		}
+
+	}
+
+}
+
+footer {
+
+	a.back-to-top {
+		border: 0;
+		background-color: var(--wp--preset--color--transparent);
+		cursor: pointer;
+		display: block;
+		padding: 0;
+		margin: 0;
+		position: fixed;
+		right: 1.5rem;
+		bottom: 5.25rem;
+		opacity: 0;
+		z-index: 9999;
+		transition: opacity 0.3s ease;
+
+		.back-to-top-icon {
+			vertical-align: bottom;
+		}
+
+		&:focus {
+			outline: 2px solid var(--wp--preset--color--primary-brand);
+			outline-offset: 2px;
+			border-radius: 3px;
+		}
+	}
+}

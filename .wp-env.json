@@ -4,6 +4,6 @@
 		"./build/blocks-jsx/myBlock" 
 	],
 	"themes": [
-		"./bcgov-wordpress-block-theme"
+		"./bcgov-block-theme"
 	]
 }

@@ -1,0 +1,25 @@
+// Admin styles
+
+// Load Public Styles
+@import "../public/index";
+
+html :where(.editor-styles-wrapper) {
+
+	* {
+		font-family: BCSans, "Noto Sans", Verdana, Arial, sans-serif;
+	}
+}
+
+.admin-placeholder {
+	background: var(--wp--preset--gradient--duodenary-opacity);
+	border: 1px solid var(--wp--preset--color--gray-80);
+	padding: 2rem;
+}
+
+.hide-in-admin {
+	display: none;
+}
+
+.show-in-admin {
+	display: inherit;
+}

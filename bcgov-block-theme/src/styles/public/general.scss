@@ -1,0 +1,227 @@
+/* stylelint-disable no-descending-specificity */
+
+
+html body.wp-admin .editor-styles-wrapper {
+
+	h1:not(.is-style-custom) {
+		font-size: clamp(1.75rem, 0.25rem + 3.3333vw, 3.25rem) !important;
+		line-height: 1.25;
+		min-height: 0;
+	}
+
+	h2:not(.is-style-custom) {
+		font-size: clamp(1.5rem, 0.25rem + 3.3333vw, 2.75rem) !important;
+		line-height: 1.25;
+		min-height: 0;
+	}
+
+	h3:not(.is-style-custom) {
+		font-size: clamp(1.25rem, 0.25rem + 3.3333vw, 2.25rem) !important;
+		line-height: 1.25;
+		min-height: 0;
+	}
+
+	h4:not(.is-style-custom) {
+		font-size: clamp(1.15rem, 0.25rem + 3.3333vw, 2rem) !important;
+		line-height: 1.25;
+		min-height: 0;
+	}
+
+	h5:not(.is-style-custom) {
+		font-size: clamp(1.1rem, 0.25rem + 3.3333vw, 1.75rem) !important;
+		line-height: 1.25;
+		min-height: 0;
+	}
+
+	h6:not(.is-style-custom) {
+		font-size: clamp(1.05rem, 0.25rem + 3.3333vw, 1.5rem) !important;
+		line-height: 1.25;
+		min-height: 0;
+	}
+
+	p:not(.is-style-custom),
+	li:not(.is-style-custom) {
+		font-size: clamp(1rem, 0.25rem + 3.3333vw, 1.25rem) !important;
+		line-height: 1.5;
+		min-height: 0;
+	}
+
+	.wp-block-columns {
+
+		&.is-style-constrained {
+			margin-bottom: 0;
+			max-width: 1440px;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+/* General styles.
+*
+*/
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 80px;
+}
+
+body {
+
+	&:not(.wp-admin) {
+		opacity: 0;
+		animation-duration: 0.3s;
+		animation-fill-mode: forwards;
+		animation-timing-function: ease-out;
+		animation-delay: 0s;
+		animation-iteration-count: 1;
+		animation-name: fadeIn;
+	}
+
+	@keyframes fadeIn {
+
+		0% {
+			opacity: 0;
+		}
+
+		100% {
+			opacity: 1;
+		}
+	}
+
+	font-family: BCSans, "Noto Sans", Verdana, Arial, sans-serif;
+	color: $body-color;
+
+	/*
+ 	* Clamping text as a default.
+	* Warning: This allows the option to use custom styles.
+	* Editor Styles do not account for class which may be removed in FSE template.
+	* Clamp adjusts between viewport sizes of 320px to 840px
+ 	*/
+	.bcgov-body-content {
+		flex: 1;
+
+		h1:not(.is-style-custom) {
+			font-size: clamp(1.75rem, 0.25rem + 3.3333vw, 3.25rem) !important;
+			line-height: 1.25;
+			min-height: 0;
+		}
+
+		h2:not(.is-style-custom) {
+			font-size: clamp(1.5rem, 0.25rem + 3.3333vw, 2.75rem) !important;
+			line-height: 1.25;
+			min-height: 0;
+		}
+
+		h3:not(.is-style-custom) {
+			font-size: clamp(1.25rem, 0.25rem + 3.3333vw, 2.25rem) !important;
+			line-height: 1.25;
+			min-height: 0;
+		}
+
+		h4:not(.is-style-custom) {
+			font-size: clamp(1.15rem, 0.25rem + 3.3333vw, 2rem) !important;
+			line-height: 1.25;
+			min-height: 0;
+		}
+
+		h5:not(.is-style-custom) {
+			font-size: clamp(1.1rem, 0.25rem + 3.3333vw, 1.75rem) !important;
+			line-height: 1.25;
+			min-height: 0;
+		}
+
+		h6:not(.is-style-custom) {
+			font-size: clamp(1.05rem, 0.25rem + 3.3333vw, 1.5rem) !important;
+			line-height: 1.25;
+			min-height: 0;
+		}
+
+		p:not(.is-style-custom),
+		li:not(.is-style-custom) {
+			font-size: clamp(1rem, 0.25rem + 3.3333vw, 1.25rem) !important;
+			line-height: 1.5;
+			min-height: 0;
+		}
+	}
+}
+
+.admin-placeholder,
+.hide,
+.hidden {
+	display: none;
+}
+
+.hide-in-admin {
+	display: inherit;
+}
+
+.show-in-admin {
+	display: hide;
+}
+
+main,
+.post-content {
+
+	@media (max-width: $breakpoint-xl) {
+		margin-left: 2rem;
+		margin-right: 2rem;
+	}
+
+	.alignfull {
+
+		@media (max-width: $breakpoint-xl) {
+			margin-left: -2rem !important;
+			width: 100vw;
+		}
+	}
+}
+
+.site-banner {
+	margin-top: 0;
+}
+
+#post-content {
+	margin-top: 0;
+}
+
+.wp-block-columns {
+
+	&.is-style-constrained {
+		margin-bottom: 0;
+		max-width: 1440px;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+
+		.wp-block-column {
+			margin: 0 auto;
+			max-width: calc(100% - 4rem);
+
+			@media (min-width: calc($breakpoint-xl + 2rem)) {
+				max-width: 1440px;
+			}
+		}
+	}
+}
+
+.wp-block-media-text {
+	overflow: hidden;
+}
+
+.wp-site-blocks {
+
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+
+	body.admin-bar & {
+		min-height: calc(100vh - 32px);
+	}
+
+	main,
+	#post-content {
+		flex: 1;
+	}
+
+}

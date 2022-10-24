@@ -1,7 +1,11 @@
 {
-	"core": null,
+	"core": "WordPress/WordPress",
 	"plugins": [
-		"./build/blocks-jsx/myBlock" 
+		"./build/blocks-jsx/myBlock",
+		"./external-plugins/all-in-one-seo-pack",
+		"./external-plugins/custom-post-type-ui",
+		"./testblock",
+		"./dynamicblock"
 	],
 	"themes": [
 		"./bcgov-block-theme"
